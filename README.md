@@ -1,11 +1,15 @@
+# Title: Recommender Systems for Yelp Users
 
+#### Authors : Srikanth Babu Mandru
+
+#### Summary : 
 •	Designed and built recommender systems to suggest best food businesses for users based on the Yelp dataset filtered to around 200k ratings with approximately 2000 businesses.
 
 •	Implemented recommender systems using Baseline approach , Item- Item Collaborative Filtering , Latent Factors models involving Matrix Factorization. Combined these techniques to make hybrid models in order to get better results. RMSE was used as evaluation metric to compare different models and achieved best RMSE score of ‘1.166’ with hybrid model implemented using SVD with regularization and Baseline methods.
 
 
 
-Files Description :
+**Files Description :**
 
 - " Recommender systems_read_files.ipynb " file contains code to read data files, preprocess the data and store data as csv file.
 
