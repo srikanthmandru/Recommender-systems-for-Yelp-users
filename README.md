@@ -86,13 +86,13 @@ III. Experimental setup to obtain RMSE:
         
   3. Report the RMSE of each fold for all models
 
-### Results and Discussion
+### Results and Discussion :
   
   It can be inferred from the following figures (fig 1, fig 2, fig 3) that,
 
 1. Model efficiency: (against bias problem)
 
-  Across all models, (from figure 2)
+  Across all models, (from figure 1 and figure 2)
   
   - Non-hybrid models did not have enough parameters to capture the patterns in data which resulted in high error
   
@@ -121,11 +121,11 @@ Figure 1 shows the RMSE values for each of the fold in k-fold cross-validation o
 
 ### Conclusion: 
   
-  Multiple methods were implemented to predict the probable ratings. Firstly, a model predicting baseline estimates was built and found that the global averages method (Baseline) haven’t yielded any promising RMSE scores. Then taking the similarities into account, item-item collaborative filtering, and a hybrid model that incorporates Baseline into item-item collaborative filtering method were implemented to get better results. Later part of the project mainly focused on latent factor models which are widely used in real world systems. Started off with basic SVD model and further built hybrid model incorporating both regularization and global averages (Baseline) to SVD that resulted in the best model with low RMSE value. It can be concluded that hybrid models tend to perform better in comparison to simpler models and regularization technique of latent factors further improved RMSE score with low standard deviations across 5-folds.
+  Multiple Machine learning models were implemented to predict the probable ratings. Firstly, a model predicting baseline estimates was built and found that the global averages method (Baseline) haven’t yielded any promising RMSE scores. Then taking the similarities into account, item-item collaborative filtering, and a hybrid model that incorporates Baseline into item-item collaborative filtering method were implemented to get better results. Later part of the project mainly focused on latent factor models which are widely used in real world systems. Started off with basic SVD model and further built hybrid model incorporating both regularization and global averages (Baseline) to SVD that resulted in the best model with low RMSE value. It can be concluded that hybrid models tend to perform better in comparison to simpler models and regularization technique of latent factors further improved RMSE score with low standard deviations across 5-folds.
 
-### Takeaway Points & Future Work
+### Takeaway Points & Future Work :
 
-1. Use combinations of different methods 
+1. Use combinations of different methods (that is., ensemble methods)
 
 2. Regularization prevents overfitting
 
