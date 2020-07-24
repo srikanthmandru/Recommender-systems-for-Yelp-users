@@ -10,7 +10,9 @@
 
 ### Problem Definition : 
 
- Given the ratings for businesses by yelp users (known ratings), predict the probable ratings (unknown ratings) Ø Goal is to build a recommender system with the following properties :
+ - Given the ratings for businesses by yelp users (known ratings), predict the probable ratings (unknown ratings) 
+ 
+ - The Goal of this project is to build a recommender system with the following properties :
  
   1. Robust - Resilient to variances in data
   
