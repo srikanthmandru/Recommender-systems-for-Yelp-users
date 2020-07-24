@@ -6,7 +6,7 @@
 
 •	Designed and built recommender systems to suggest best food businesses for users based on the Yelp dataset filtered to around 200k ratings with approximately 2000 businesses.
 
-•	Implemented recommender systems using Baseline approach , Item- Item Collaborative Filtering , Latent Factors models involving Matrix Factorization. Combined these techniques to make hybrid models in order to get better results. RMSE was used as evaluation metric to compare different models and achieved best RMSE score of ‘1.166’ with hybrid model implemented using SVD with regularization and Baseline methods.
+•	Implemented recommender systems using Baseline approach , Item- Item Collaborative Filtering , Latent Factors models involving Matrix Factorization. Combined these techniques to make hybrid models in order to get better results. RMSE (Root Mean Squared Error) was used as evaluation metric to compare different models and achieved best RMSE score of ‘1.166’ with hybrid model implemented using SVD with regularization and Baseline methods.
 
 ### Problem Definition : 
 
@@ -119,7 +119,7 @@ Figure 1 shows the RMSE values for each of the fold in k-fold cross-validation o
 
 ### Conclusion: 
   
-  Multiple methods were implemented to predict the probable ratings. Firstly, a model predicting baseline estimates was built and found that the global averages method (Baseline) haven’t yielded any promising RMSE scores. Then taking the similarities into account, item-item collaborative filtering, and a hybrid model that incorporates Baseline into item-item collaborative filtering method was implemented to get better results. Later part of the project mainly focused on latent factor models which are widely used in real world systems. Started off with basic SVD model and further built hybrid model incorporating both regularization and global averages (Baseline) to SVD that resulted in the best model with low RMSE value. It can be concluded that hybrid models tend to perform better in comparison to simpler models and regularization technique of latent factors further improved RMSE score with low standard deviations across 5-folds.
+  Multiple methods were implemented to predict the probable ratings. Firstly, a model predicting baseline estimates was built and found that the global averages method (Baseline) haven’t yielded any promising RMSE scores. Then taking the similarities into account, item-item collaborative filtering, and a hybrid model that incorporates Baseline into item-item collaborative filtering method were implemented to get better results. Later part of the project mainly focused on latent factor models which are widely used in real world systems. Started off with basic SVD model and further built hybrid model incorporating both regularization and global averages (Baseline) to SVD that resulted in the best model with low RMSE value. It can be concluded that hybrid models tend to perform better in comparison to simpler models and regularization technique of latent factors further improved RMSE score with low standard deviations across 5-folds.
 
 ### Takeaway Points & Future Work
 
