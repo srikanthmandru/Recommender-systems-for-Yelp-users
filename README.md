@@ -2,7 +2,7 @@
 
 #### Authors : Srikanth Babu Mandru
 
-#### Summary : 
+### Summary : 
 
 •	Designed and built recommender systems to suggest best food businesses for users based on the Yelp dataset filtered to around 200k ratings with approximately 2000 businesses.
 
@@ -40,7 +40,7 @@
 
 ### Proposed Method:
 
-I. Build Recommender systems using the different existing methods (stated below) and compare the models based on the average of RMSE values computed through k-fold cross-validation
+I. Build Recommender systems using the different existing methods (stated above) and compare the models based on the average of RMSE values computed through k-fold cross-validation
 
 II. Methods implemented:
 
@@ -48,7 +48,7 @@ II. Methods implemented:
   
   2. Item–Item collaborative filtering
   
-      - Similarity metric used – Pearson correlation coefficient
+      - Similarity metric used : Pearson correlation coefficient
       
   3. SVD
   
@@ -60,14 +60,15 @@ II. Methods implemented:
       
       - Baseline and SVD with Regularization
       
+III. Once there is an extrapolated value for each user and item from our model's result, we can recommend the user with top-n items or in context of social networking, we can recommended other similar users to the each of our user.
 
 ### Data Description & Experimental Setup :
 
-I. Data (after filtering) used for building models comprises of 200,000 ratings given by 31,824 users to 2061 food-related businesses
+I. Data (after filtering) used for building models comprises of 200,000 ratings given by 31,824 users to 2061 food-related businesses.
 
 II. Handling Cold Start problem:
 
-  i. Filtered data with constraints :
+  - Filtered data with constraints :
   
       - Business rated by minimum 20 users § Users with a minimum of 2 ratings
       
@@ -77,9 +78,9 @@ III. Experimental setup to obtain RMSE:
   
   2. For each model do
   
-      i. Repeat k times
+      - Repeat k times
       
-        - Run model on k-1 folds and compute RMSE on hold out fold
+       - Run model on k-1 folds and compute RMSE on hold out fold
         
   3. Report the RMSE of each fold for all models
 
@@ -87,31 +88,44 @@ III. Experimental setup to obtain RMSE:
   
   It can be inferred from the following figures (fig 1, fig 2, fig 3) that,
 
-1. Model efficiency: 
+1. Model efficiency: (against bias problem)
 
-   Across all models,
+  Across all models, (from figure 2)
   
-  i. Non-hybrid models do not have enough parameters to capture the patterns in data which resulted in high error
+  - Non-hybrid models did not have enough parameters to capture the patterns in data which resulted in high error
   
-  ii. Hybrid methods performed well showing low errors on all folds
+  - Hybrid methods performed well showing low errors on all folds
   
-2. Robustness :
+2. Robustness : (against overfitting problem)
 
-  iii. Models with regularization gave better results with less deviations in RMSE values
+  - From figure 3, Models with regularization gave better results with less deviations in RMSE values.
 
-### Figures :
+Figure 1 shows the RMSE values for each of the fold in k-fold cross-validation of our models (Here, k = 5).
 
+<img src ="result_imgs/all _folds.png" width = "650" height = "400" align = "center" /> 
+
+<p align="center"> Figure 1: RMSE across 5-folds for each of the recommender system model <p align="center">
+ 
+ 
+<img src ="result_imgs/mean.png" width = "500" height = "400" align = "center" /> 
+
+<p align="center"> Figure 2: Average RMSE of 5-folds for each of the recommender system model <p align="center">
+ 
+ 
+<img src ="result_imgs/std.png" width = "500" height = "400" align = "center" /> 
+
+<p align="center"> Figure 3: Standard deviation in RMSE of 5-folds for each of the recommender system model <p align="center">
 
 
 ### Conclusion: 
   
-  Multiple methods were implemented to predict the probable ratings. Firstly, a model predicting baseline estimates was built and found that the global averages method (Baseline) haven’t yielded any promising RMSE scores. Then taking the similarities into account, item-item collaborative filtering, and a hybrid model that incorporates Baseline into item-item collaborative filtering method was implemented to get better results. Later part of the project mainly focused on latent factor models which are widely used in real world systems. Started off with basic SVD model and further built hybrid model incorporating both regularization and global averages (Baseline) to SVD that resulted in the best model with low RMSE value. It can be concluded that hybrid models tend to perform better in comparison to simpler models and regularization of latent factors further improved RMSE score and standard deviations of error across 5-folds.
+  Multiple methods were implemented to predict the probable ratings. Firstly, a model predicting baseline estimates was built and found that the global averages method (Baseline) haven’t yielded any promising RMSE scores. Then taking the similarities into account, item-item collaborative filtering, and a hybrid model that incorporates Baseline into item-item collaborative filtering method was implemented to get better results. Later part of the project mainly focused on latent factor models which are widely used in real world systems. Started off with basic SVD model and further built hybrid model incorporating both regularization and global averages (Baseline) to SVD that resulted in the best model with low RMSE value. It can be concluded that hybrid models tend to perform better in comparison to simpler models and regularization technique of latent factors further improved RMSE score with low standard deviations across 5-folds.
 
 ### Takeaway Points & Future Work
 
 1. Use combinations of different methods 
 
-2.  Regularization prevents overfitting
+2. Regularization prevents overfitting
 
 3. **Future Work:** In future, hybrid methods can be built by taking temporal and seasonal biases into account. Further, we can use clustering techniques to aid in getting the similar items for collaborative filtering.
 
